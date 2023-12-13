@@ -3,7 +3,7 @@
 describe('Form Layouts', () => {
   const userAndPass = `${Cypress.env('siteAuthUserName')}:${Cypress.env('siteAuthPassword')}`
 
-  it.only('test qaauto', () => {
+  it('test qaauto', () => {
     cy.visit(`https://${userAndPass}@qauto.forstudy.space/`)
     cy.request('POST', 'https://qauto.forstudy.space/api/auth/signin', {
       "email": Cypress.env('user'),
