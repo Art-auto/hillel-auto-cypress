@@ -14,5 +14,6 @@ describe('Form Layouts', () => {
     cy.contains('button', 'Edit profile').click()
     cy.get('input#editProfilePhoto').selectFile('cypress/fixtures/logo.jpg')
     cy.contains('Save').click()
+    cy.matchImageSnapshot('logo_change')
   })
 })
