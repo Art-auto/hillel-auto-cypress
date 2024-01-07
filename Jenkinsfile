@@ -1,11 +1,8 @@
 pipeline{
-    agent{
-        node {
-          env.NODEJS_HOME = "${tool 'Node'}"
-          env.PATH="${env.NODEJS_HOME}/bin:${env.PATH}"
-          sh 'npm --version'
-      }
-    }
+    agent any
+ 
+    tools {nodejs "node"}
+    
     stages{
         stage("Install dependancies"){
             steps{
