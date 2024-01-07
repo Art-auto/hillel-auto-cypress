@@ -1,6 +1,8 @@
 pipeline{
     agent{
-        label "built-in"
+        nodejs('node') {
+          // some block
+        }
     }
     stages{
         stage("Install dependancies"){
