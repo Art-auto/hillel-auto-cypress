@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label "node"
+        label "built-in"
     }
     stages{
         stage("Install dependancies"){
